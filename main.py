@@ -246,11 +246,6 @@ def open_dijkstra_window():
 
     tk.Button(input_window, text="Exécuter", command=on_execute).pack(pady=20)
 
-
-
-
-
-
 # Fonction pour exécuter l'algorithme Nord-Ouest
 def execute_nord_ouest(supply, demand):
     rows, cols = len(supply), len(demand)
@@ -477,11 +472,6 @@ def open_bellman_ford_window():
 
     tk.Button(input_window, text="Exécuter", command=on_execute).pack(pady=20)
 
-
-
-
-
-
 # Fonction pour calculer les coûts réduits
 def calculate_reduced_costs(costs, u, v):
     rows, cols = costs.shape
@@ -576,11 +566,7 @@ def open_potentiel_metra_window():
 
     tk.Button(input_window, text="Exécuter", command=on_execute).pack(pady=20)
 
-
-
 ###############################################################################################################################################
-
-
 
 # Algorithme de Ford-Fulkerson
 class Graph:
@@ -681,11 +667,14 @@ def open_algorithms_window():
     tk.Button(algorithms_window, text="Ford Fulkerson", command=open_ford_fulkurson_window).pack(pady=10)
 
 
-
 # Interface principale
 root = tk.Tk()
 root.title("Interface Principale")
 root.geometry("400x200")
+
+label_paragraphe = tk.Label(root, text="Réalisé par: Qaroun Mariame.\nEncadré par: El Mkhalet Mouna", justify="center")
+label_paragraphe.pack(pady=20)
+
 
 tk.Button(root, text="Algorithmes Recherche", command=open_algorithms_window).pack(pady=50)
 
